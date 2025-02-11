@@ -1,4 +1,4 @@
-void Estimator::slideMapWindow()
+void LiDAREstimator::slideMapWindow()
 {
     TicToc t_margin;
     if (marginalization_flag == MARGIN_OLD)
@@ -199,10 +199,10 @@ void LiDAREstimator::slideEstimationWindow()
 
 
 // real marginalization is removed in solve_ceres()
-void Estimator::slideWindowNew()
+void LiDAREstimator::slideWindowNew()
 {
     sum_of_front++;
-    f_manager.removeFront(frame_count);
+    pointcloud.update(frame_count);
 }
 // real marginalization is removed in solve_ceres()
 void Estimator::slideWindowOld()
@@ -218,8 +218,8 @@ void Estimator::slideWindowOld()
         R1 = Rs[0] * ric[0];
         P0 = back_P0 + back_R0 * tic[0];
         P1 = Ps[0] + Rs[0] * tic[0];
-        f_manager.removeBackShiftDepth(R0, P0, R1, P1);
+        pointcloud.update(R0, P0, R1, P1);
     }
     else
-        f_manager.removeBack();
+        pointcloud.update();
 }
