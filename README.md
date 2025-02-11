@@ -5,3 +5,11 @@ The latter is the integration of visual projection residuals and LiDAR odometry 
 This repository contains core code for buffer mechanism and dual sliding window. The full project will be released upon the acceptance of mansucript.
 
 # Dependency
+Our project is developed based on [LVI-SAM](https://github.com/TixiaoShan/LVI-SAM). Therefore, the dependencies of our method are consistent with it, and there are no additional dependency requirements.
+
+
+
+
+
+
+
