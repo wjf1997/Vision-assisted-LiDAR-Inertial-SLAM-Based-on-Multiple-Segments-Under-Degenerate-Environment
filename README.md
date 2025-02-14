@@ -4,6 +4,7 @@ The key technology lies in two aspects, the former is the buffer mechanism for d
 The latter is the integration of visual projection residuals and LiDAR odometry through dual sliding windows within degenerate segment.
 This repository contains core code for buffer mechanism and dual sliding window. The full project will be released upon the acceptance of mansucript.
 We have tested our project in [TartanAir, SubT-MARS](https://superodometry.com/iccv23_challenge_LiI) dataset, [Hilti](https://hilti-challenge.com/dataset-2022.html) dataset and self-made UAV dataset.
+![2](https://github.com/user-attachments/assets/14da6f90-6b5a-4ff9-8610-00c72e010047)
 
 # Dependency
 Our project is developed based on [LVI-SAM](https://github.com/TixiaoShan/LVI-SAM). Therefore, the dependencies of our method are consistent with it, and there are no additional dependency requirements.
